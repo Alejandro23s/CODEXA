@@ -1999,17 +1999,110 @@ footer > div:last-child {
         width: 120px;
     }
 
-    .nav-links {
-        display: none;
-    }
+    /* ========================================
+   MENÚ MÓVIL
+======================================== */
 
-    .nav-cta {
-        display: none;
-    }
+.nav-links {
+    display: none;
+}
 
-    .menu-toggle {
-        display: block;
-    }
+.nav-cta {
+    display: none;
+}
+
+.menu-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+
+    background: rgba(10, 14, 25, 0.75);
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    z-index: 1002;
+}
+
+
+/* MENÚ ABIERTO */
+
+.nav-links.active {
+    position: fixed;
+
+    top: 80px;
+    left: 15px;
+    right: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 12px;
+
+    background: rgba(8, 11, 20, 0.98);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    z-index: 1001;
+}
+
+
+/* ENLACES DEL MENÚ */
+
+.nav-links.active a {
+    display: block;
+
+    width: 100%;
+
+    padding: 15px;
+
+    color: white;
+
+    font-size: 1rem;
+
+    border-radius: 9px;
+
+    text-align: left;
+}
+
+
+/* Hover / toque */
+
+.nav-links.active a:hover {
+    background: rgba(99, 102, 241, 0.15);
+
+    color: #60A5FA;
+}
+
+
+/* Quitamos la línea que aparece debajo */
+
+.nav-links.active a::after {
+    display: none;
+}
 
 
     /* Hero */
