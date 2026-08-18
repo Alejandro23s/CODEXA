@@ -374,11 +374,36 @@ header nav {
 }
 
 .btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 23px;
+
+    border-radius: 11px;
+
+    font-weight: 600;
+
     background: var(--accent);
+
     color: white;
 
     box-shadow:
         0 10px 30px rgba(99, 102, 241, 0.25);
+
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--accent-light);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(99, 102, 241, 0.35);
 }
 
 .btn-primary:hover {
